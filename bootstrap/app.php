@@ -60,10 +60,14 @@ $app->singleton(
 */
 
 $app->configure('app');
+$app->configure('auth');
 $app->configure('cache');
 $app->configure('database');
 $app->configure('filesystems');
+$app->configure('jwt');
+$app->configure('logging');
 $app->configure('queue');
+$app->configure('repository');
 
 /*
 |--------------------------------------------------------------------------
@@ -80,9 +84,9 @@ $app->configure('queue');
 //     App\Http\Middleware\ExampleMiddleware::class
 // ]);
 
-// $app->routeMiddleware([
-//     'auth' => App\Http\Middleware\Authenticate::class,
-// ]);
+ $app->routeMiddleware([
+     'auth' => App\Http\Middleware\Authenticate::class,
+ ]);
 
 /*
 |--------------------------------------------------------------------------
@@ -96,9 +100,12 @@ $app->configure('queue');
 */
 
 // $app->register(App\Providers\AppServiceProvider::class);
-// $app->register(App\Providers\AuthServiceProvider::class);
+ $app->register(App\Providers\AuthServiceProvider::class);
 // $app->register(App\Providers\EventServiceProvider::class);
 $app->register(Illuminate\Redis\RedisServiceProvider::class);
+$app->register(Tymon\JWTAuth\Providers\LumenServiceProvider::class);
+$app->register(Prettus\Repository\Providers\LumenRepositoryServiceProvider::class);
+$app->register(App\Providers\RepositoryServiceProvider::class);
 /*
 |--------------------------------------------------------------------------
 | Load The Application Routes

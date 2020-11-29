@@ -6,9 +6,13 @@
     "type": "project",
     "require": {
         "php": "^7.3|^8.0",
+        "illuminate/contracts": "^8.16",
         "illuminate/redis": "^8.0",
         "laravel/lumen-framework": "^8.0",
-        "predis/predis": "^1.1"
+        "league/fractal": "^0.19.2",
+        "predis/predis": "^1.1",
+        "prettus/l5-repository": "^2.7",
+        "tymon/jwt-auth": "^1.0"
     },
     "require-dev": {
         "fakerphp/faker": "^1.9.1",

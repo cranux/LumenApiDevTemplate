@@ -13,9 +13,30 @@
 |
 */
 
-$router->get('/', function () use ($router) {
-    return $router->app->version();
-//    dd(public_path());
+$router->group([
+    'namespace' => 'AdminApi',
+    'prefix'=>'admin_api'
+], function () use ($router){
+    $router->get('login','AuthController@login');
+
+    $router->group([
+        'middleware' => 'auth:adminApi'
+    ],function () use ($router) {
+        $router->get('user/list','UserController@list');
+    });
 });
-$router->get('test','TestController@index');
+
+
+
+$router->group([
+    'namespace' => 'Api',
+    'prefix'=>'api'
+], function () use ($router){
+    $router->get('login','AuthController@login');
+    $router->group([
+        'middleware' => 'auth:api'
+    ],function () use ($router) {
+        $router->get('member/list','MemberController@list');
+    });
+});
 
