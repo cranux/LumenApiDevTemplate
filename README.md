@@ -60,5 +60,8 @@ php artisan jwt:secret
 
 文档地址  [prettus/l5-repository](https://packagist.org/packages/prettus/l5-repository?)
 
+## License
+  [MIT](https://github.com/cranux/LumenApiDevTemplate/blob/master/LICENSE)
 
 #### 感谢项目中使用到的包
+

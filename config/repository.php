@@ -234,12 +234,12 @@ return [
             'models'       => 'Models',
             'repositories' => 'Repositories',
             'interfaces'   => 'Repositories/Interfaces',
-            'transformers' => 'Transformers',
-            'presenters'   => 'Presenters',
+            'transformers' => 'Repositories/Transformers',
+            'presenters'   => 'Repositories/Presenters',
             'validators'   => 'Validators',
             'controllers'  => 'Http/Controllers',
             'provider'     => 'RepositoryServiceProvider',
-            'criteria'     => 'Criteria'
+            'criteria'     => 'Repositories/Criteria'
         ]
     ]
 ];
