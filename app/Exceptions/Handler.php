@@ -53,6 +53,10 @@ class Handler extends ExceptionHandler
         if ($exception instanceof \Symfony\Component\HttpKernel\Exception\NotFoundHttpException) {
             return json(4004,'路由不存在');
         }
+        if ($exception) {
+            $errorData = $this->convertExceptionToArray($exception);
+            return json(5000,'error',$errorData);
+        }
         return parent::render($request, $exception);
     }
 }
