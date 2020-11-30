@@ -1,6 +1,6 @@
 {
-    "name": "laravel/lumen",
-    "description": "The Laravel Lumen Framework.",
+    "name": "cranux/LumenApiDevTemplate",
+    "description": "快速开发API项目",
     "keywords": ["framework", "laravel", "lumen"],
     "license": "MIT",
     "type": "project",
