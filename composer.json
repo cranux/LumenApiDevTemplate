@@ -1,5 +1,5 @@
 {
-    "name": "cranux/LumenApiDevTemplate",
+    "name": "cranux/lumen-api-dev-template",
     "description": "快速开发API项目",
     "keywords": ["framework", "laravel", "lumen"],
     "license": "MIT",
