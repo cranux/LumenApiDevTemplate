@@ -18,6 +18,7 @@ $router->group([
     'prefix'=>'admin_api'
 ], function () use ($router){
     $router->get('login','AuthController@login');
+//    $router->post('login','AuthController@login');
 
     $router->group([
         'middleware' => 'auth:adminApi'
